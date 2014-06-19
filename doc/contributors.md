@@ -9,6 +9,9 @@ Please respect this simple rules:
 2. No big Binary's here! Instead past a link in the tools directory (as an MD File)
    (Binary's under 1 MB are OK)
 3. Respect the existing folder structure:
-       /tools    usefull binary's and links
-       /src      selfwritten scripts
-       /doc      documentation
+
+| Directory        | Description                         |
+| ---------------- |:-----------------------------------:|
+| /tools           | usefull binary's and links          |
+| /src             | selfwritten scripts                 |
+| /doc             | documentation                       |
