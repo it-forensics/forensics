@@ -1,0 +1,5 @@
+# from the python.gitignore (by github)
+*.log
+*pip-log.txt
+*.egg
+temp/
