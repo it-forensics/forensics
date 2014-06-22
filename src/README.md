@@ -6,9 +6,13 @@ __The scripts doesn't work for me, what I do wrong?__
 All of the script are tested and developed on Ubuntu (14.04). So please use
 also Ubuntu :)
 There are multiple things that can go wrong, please following this checklist:
+
 1. Python (2.7) installed?  On Ubuntu: `apt-get install python`
+
 2. Scapy installed?  On Ubuntu: `apt-get install python-scapy`
+
 3. Script executed as root?  On Linux:  `sudo python coolscript.py`
+
 
 If the script still not work, please contact us.
 
