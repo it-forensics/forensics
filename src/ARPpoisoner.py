@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# This tool is for educational use only!
+
 # Description: Assign a given IP Address to the MAC Address of the attacker on
 # a victim. All traffic of the victim to the given IP address now goes throw
 # the attacker
@@ -10,7 +12,8 @@ import time
 from scapy.all import *
 
 def printusage():
-  print "Usage:   " + sys.argv[0] + ": <target> <spoof_IP>"
+  """ Prints usage information """
+  print "Usage:   {0} <target> <spoof_IP>".format(sys.argv[0])
   print "  ---> This tool is for educational use only! <---"
 
 # Check given arguments
