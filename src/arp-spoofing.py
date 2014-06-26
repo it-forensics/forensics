@@ -2,10 +2,10 @@
 
 # This tool is for educational use only!
 
-# Directs all ethernet traffic of a given interface in the lan
+# Description: Directs all ethernet traffic of a given interface in the LAN
 # over the host that runs this script. This is done via arp-spoofing
 
-# Requirements: scapy + root privilegues
+# Requirements: scapy + root privileges
 
 import sys
 from scapy.all import *
