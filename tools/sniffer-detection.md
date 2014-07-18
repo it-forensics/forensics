@@ -1,6 +1,6 @@
 # How to detect a network sniffer
 
-** Local sniffer **
+**Local sniffer**
 
 If a sniffer is running on your local machine, maybe some malware is sniffing
 the network from your host, at least one network-interface has to run in
@@ -8,7 +8,7 @@ promisc mode. If no rootkit is locking this functionality, with
 `ifconfig -a | grep PROMISC` or `cat /var/log/kern.log | grep promisc` you can
 view if a network-interface is in promisc mode.
 
-** Remote sniffer **
+**Remote sniffer**
 
 > Remote sniffer detection script [here](https://github.com/it-forensics/forensics/blob/master/src/sniffer-detection.py)
 
