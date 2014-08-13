@@ -2,9 +2,9 @@
 
 # This tool is for educational use only!
 
-# Derscription: A DOS (Denail of Service) where TCP Pacets are sent and
-# not confirmed again (Destination left in "Half Open" connection state)
-# To prevent to get DOS'ed from the Destination Machine we use IP Spoofing.
+# Description: A DOS-Attack (Denial of Service) where TCP Packets are sent and
+# not confirmed again (destination computer will be left in "Half Open" connection state)
+# To prevent getting DOS'ed by ourselfe we use IP spoofing.
 
 # Requirements: scapy and root privileges
 
