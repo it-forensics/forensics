@@ -2,11 +2,8 @@
 
 # This tool is for educational use only!
 
-# Description: By sending random ethernet traffic over the network, a network
-# switch's mac address store will be filled. The goal is to force the switch
-# to only functione as a hub or not working anymore. Then all network traffic
-# will be sent to everyone connected to the switch (now a hub). Or the switch
-# give up and do nothing :)
+# Description: Scans ports 1 to 1025 on the destination host. Additionaly
+# you can spoof the source ip.
 
 # Requirements: scapy + root privilegues
 
@@ -15,7 +12,7 @@ import sys
 from scapy.all import sr, IP, TCP
 
 if len(sys.argv) < 2:
-  print "{0} <host> <spoofed_source_ip>".format(sys.argv[0])
+  print "{0} <host> [<spoofed_source_ip>]".format(sys.argv[0])
   sys.exit(1)
 
 if len(sys.argv) == 3:
